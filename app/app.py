@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-
+import time
 
 # Callback appelée lorsqu'un message est reçu depuis le topic
 def on_message(client, userdata, msg):
