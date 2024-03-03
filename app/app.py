@@ -10,7 +10,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(f"Message reçu sur le topic {msg.topic}: {msg.payload.decode()}")
 
-
+print("MQTT sub")
 
 # Configuration du client MQTT
 mqtt_client = mqtt.Client()
