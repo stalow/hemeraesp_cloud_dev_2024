@@ -1,6 +1,8 @@
+from flask import Flask
 import paho.mqtt.client as mqtt
 
 
+app = Flask(__name__)
 
 # Callback appelée lorsqu'un message est reçu depuis le topic
 def on_message(client, userdata, msg):
@@ -24,3 +26,11 @@ mqtt_client.subscribe("/hem/testhem")
 
 # Démarrage du client MQTT en arrière-plan
 mqtt_client.loop_start()
+
+
+@app.route('/dontgohere')
+def hello_world():
+    return 'Hello, Docker Compose with Python and Mosquitto!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
