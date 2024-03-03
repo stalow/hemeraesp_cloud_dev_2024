@@ -29,9 +29,9 @@ mqtt_client.loop_start()
 #client.loop_forever()
 
 
-"""@app.route('/dontgohere')
+@app.route('/dontgohere')
 def hello_world():
     return 'Hello, Docker Compose with Python and Mosquitto!'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)"""
+    app.run(host='0.0.0.0', port=5000)
