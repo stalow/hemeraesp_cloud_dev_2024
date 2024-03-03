@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Commande pour exécuter le service Python
-CMD ["python", "app.py"]
+#CMD ["python", "app.py"]
