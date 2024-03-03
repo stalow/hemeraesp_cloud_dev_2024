@@ -22,6 +22,10 @@ mqtt_client.connect("mqtt", 1883, 60)
 mqtt_client.subscribe("/hem/testhem")
 
 # Démarrage du client MQTT en arrière-plan
-#mqtt_client.loop_start()
-mqtt_client.loop_forever()
+mqtt_client.loop_start()
+#mqtt_client.loop_forever()
+
+
+while True:
+    time.sleep(1)
 
