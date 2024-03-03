@@ -11,6 +11,14 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
+  python_service:
+    build:
+      context: ./app
+    container_name: app
+    restart: always
+    ports:
+      - 5000:5000
+
 volumes:
   config:
   data:

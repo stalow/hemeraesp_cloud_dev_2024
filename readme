@@ -1,1 +1,11 @@
+intaller docker selon la procédureofficiel
+
+lien pour docker compose
+https://github.com/sukesh-ak/setup-mosquitto-with-docker
+
+passwd
+
 mosquitto_passwd -U passwordfile --> pour générrer le ficher passwd
+
+pour tester
+https://testclient-cloud.mqtt.cool/
