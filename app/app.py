@@ -22,7 +22,7 @@ mqtt_client.on_message = on_message
 mqtt_client.username_pw_set("HEMERAESP", "8J7Nq4e9Ci8wTe")
 
 # Connexion au broker MQTT (Mosquitto)
-mqtt_client.connect("172.232.62.233", 1883, 60)
+mqtt_client.connect("mqtt", 1883, 60)
 mqtt_client.subscribe("/hem/testhem")
 
 # Démarrage du client MQTT en arrière-plan
