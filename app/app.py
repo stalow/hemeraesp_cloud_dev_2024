@@ -28,7 +28,7 @@ mqtt_client.subscribe("/hem/testhem")
 mqtt_client.loop_start()
 
 
-@app.route('/dontgohere')
+@app.route('/')
 def hello_world():
     return 'Hello, Docker Compose with Python and Mosquitto!'
 
