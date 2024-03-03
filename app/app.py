@@ -1,5 +1,5 @@
-from flask import Flask
 import paho.mqtt.client as mqtt
+from flask import Flask
 
 
 app = Flask(__name__)
@@ -28,7 +28,7 @@ mqtt_client.subscribe("/hem/testhem")
 mqtt_client.loop_start()
 
 
-@app.route('/')
+@app.route('/dontgohere')
 def hello_world():
     return 'Hello, Docker Compose with Python and Mosquitto!'
 

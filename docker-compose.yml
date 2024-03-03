@@ -11,6 +11,8 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
+    networks:
+      - mqtt_network
   python_service:
     build:
       context: ./app
@@ -18,8 +20,14 @@ services:
     restart: always
     ports:
       - 5000:5000
+    networks:
+      - mqtt_network
 
 volumes:
   config:
   data:
   log:
+
+networks:
+  mqtt_network:
+    driver: bridge
