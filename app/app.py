@@ -8,7 +8,7 @@ def on_connect(client, userdata, flags, rc):
 
 # Callback appelée lorsqu'un message est reçu depuis le topic
 def on_message(client, userdata, msg):
-    print(f"Message reçu sur le topic {msg.topic}: {msg.payload.decode()}")
+    #print(f"Message reçu sur le topic {msg.topic}: {msg.payload.decode()}")
     if msg.topic == "/hem/endprocess":
         print(f"Message reçu sur le topic {msg.topic}: {msg.payload.decode()}")
 
@@ -48,7 +48,7 @@ mqtt_client.username_pw_set("HEMERAESP", "8J7Nq4e9Ci8wTe")
 # Connexion au broker MQTT (Mosquitto)
 mqtt_client.connect("mqtt", 1883, 60)
 mqtt_client.subscribe("/hem/endprocess")
-
+mqtt_client.subscribe("/hem/getdata")
 # Démarrage du client MQTT en arrière-plan
 mqtt_client.loop_start()
 #mqtt_client.loop_forever()
