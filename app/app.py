@@ -8,6 +8,7 @@ def on_connect(client, userdata, flags, rc):
 
 # Callback appelée lorsqu'un message est reçu depuis le topic
 def on_message(client, userdata, msg):
+    print(f"Message reçu sur le topic {msg.topic}: {msg.payload.decode()}")
     if msg.topic == "/hem/endprocess":
         print(f"Message reçu sur le topic {msg.topic}: {msg.payload.decode()}")
 
@@ -29,9 +30,8 @@ def on_message(client, userdata, msg):
         #payload = msg.payload.decode()
 
         # Écrire le message dans le fichier CSV avec le topic "takedata"
-        with open(csv_filename, mode='r', newline='') as csv_filename:
+        with open(csv_filename, mode='r', newline='') as csv_file:
             csv_content = csv_file.read()
-            
         client.publish("/hem/rcvdata", csv_content)
 
 print("MQTT sub")
