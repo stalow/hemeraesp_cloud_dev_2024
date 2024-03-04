@@ -19,8 +19,11 @@ services:
     ports:
       - 5000:5000
     command: ["python", "-u", "app.py"]
+    volumes:
+      - ./datalog:/data
 
 volumes:
   config:
   data:
   log:
+  datalog:
